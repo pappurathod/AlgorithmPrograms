@@ -10,6 +10,7 @@ namespace AlgorithmPrograms
             Console.WriteLine("2 For Binary Search");
             Console.WriteLine("3 For Insertion Sort");
             Console.WriteLine("4 For Bubble Sort");
+            Console.WriteLine("5 For Merge Sort");
             int choice = int.Parse(Console.ReadLine());
 
             switch (choice)
@@ -45,6 +46,13 @@ namespace AlgorithmPrograms
                     SplitString = StringData.Split(" ");
                     bubbleSort.BubbleSorting(SplitString);
                     bubbleSort.Display(SplitString);
+                    break;
+                case 5:
+                    MergeSort mergeSort = new MergeSort();
+                    StringData = "Mango Apple Banana Watermelon Orange Grapes";
+                    SplitString = StringData.Split(" ");
+                    string[] SortedString = mergeSort.Sort(SplitString, 0, SplitString.Length - 1);
+                    mergeSort.Display(SortedString);
                     break;
                 case 10:
                     Console.Write("Thank you");
