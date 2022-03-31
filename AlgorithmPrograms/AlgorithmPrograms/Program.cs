@@ -9,6 +9,7 @@ namespace AlgorithmPrograms
             Console.WriteLine("1 For String Permutations");
             Console.WriteLine("2 For Binary Search");
             Console.WriteLine("3 For Insertion Sort");
+            Console.WriteLine("4 For Bubble Sort");
             int choice = int.Parse(Console.ReadLine());
 
             switch (choice)
@@ -29,8 +30,8 @@ namespace AlgorithmPrograms
                     break;
                 case 3:
                     InsertionSort insertionSort = new InsertionSort();
-                    string GivenString = "Mango Apple Banana Watermelon Orange Grapes";
-                    string[] SplitString = GivenString.Split(" ");
+                    string StringData = "Mango Apple Banana Watermelon Orange Grapes";
+                    string[] SplitString = StringData.Split(" ");
                     Console.Write("Sorted string : ");
                     insertionSort.InsertSort(SplitString);
                     foreach (var item in SplitString)
@@ -38,7 +39,13 @@ namespace AlgorithmPrograms
                         Console.Write(item + " ");
                     }
                     break;
-
+                case 4:
+                    BubbleSort bubbleSort = new BubbleSort();
+                    StringData = "Mango Apple Banana Watermelon Orange Grapes";
+                    SplitString = StringData.Split(" ");
+                    bubbleSort.BubbleSorting(SplitString);
+                    bubbleSort.Display(SplitString);
+                    break;
                 case 10:
                     Console.Write("Thank you");
                     break;
